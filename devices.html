@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Devices</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f8ff;
+        }
+
+        header {
+            background: #2053a3;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 12px;
+            font-size: 18px;
+        }
+
+        nav {
+            background: #123776;
+            padding: 14px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd43b;
+        }
+
+        .container {
+            width: 85%;
+            margin: 45px auto;
+        }
+
+        .container > h1 {
+            color: #222222;
+            font-size: 38px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px #cccccc;
+        }
+
+        .card h2 {
+            color: #2053a3;
+        }
+
+        .card p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #123776;
+            color: white;
+            text-align: center;
+            padding: 35px;
+            margin-top: 50px;
+        }
+
+        @media(max-width:700px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🖥️ Network Devices</h1>
+    <p>Computer Network Learning Portal</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="network-types.html">Network Types</a></li>
+        <li><a href="topologies.html">Topologies</a></li>
+        <li><a href="devices.html">Devices</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="ip-addressing.html">IP Addressing</a></li>
+        <li><a href="practical.html">Practical</a></li>
+        <li><a href="team.html">Team</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <h1>Important Networking Devices :</h1>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>🔀 Switch</h2>
+            <p>A switch connects multiple devices in a network and sends data to the correct device.</p>
+        </div>
+
+        <div class="card">
+            <h2>🌐 Router</h2>
+            <p>A router connects different networks and forwards data between them.</p>
+        </div>
+
+        <div class="card">
+            <h2>🔌 Hub</h2>
+            <p>A hub connects multiple devices and sends data to all connected devices.</p>
+        </div>
+
+        <div class="card">
+            <h2>📶 Repeater</h2>
+            <p>A repeater receives and retransmits signals to extend network distance.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Computer Network Learning Portal
+</footer>
+
+</body>
+</html>

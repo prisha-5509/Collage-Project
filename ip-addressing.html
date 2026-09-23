@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IP Addressing</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f8ff;
+        }
+
+        header {
+            background: #2053a3;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: white;
+        }
+
+        header p {
+            margin: 12px 0 0;
+            font-size: 18px;
+            color: white;
+        }
+
+        nav {
+            background: #123776;
+            padding: 14px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: #ffd43b;
+        }
+
+        .container {
+            width: 85%;
+            margin: 45px auto;
+        }
+
+        .container > h1 {
+            color: #222222;
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px #cccccc;
+        }
+
+        .card h2 {
+            color: #2053a3;
+            font-size: 30px;
+        }
+
+        .card p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #123776;
+            color: white;
+            text-align: center;
+            padding: 40px;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🌐 IP Addressing</h1>
+        <p>Computer Network Learning Portal</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="network-types.html">Network Types</a></li>
+            <li><a href="topologies.html">Topologies</a></li>
+            <li><a href="devices.html">Devices</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="ip-addressing.html">IP Addressing</a></li>
+            <li><a href="practical.html">Practical</a></li>
+            <li><a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <h1>IP Address Versions :</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>IPv4</h2>
+                <p>IPv4 uses a 32-bit address.</p>
+                <p><b>Example:</b> 192.168.1.1</p>
+            </div>
+
+            <div class="card">
+                <h2>IPv6</h2>
+                <p>IPv6 uses a 128-bit address.</p>
+                <p><b>Example:</b> 2001:db8::1</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Computer Network Learning Portal
+    </footer>
+
+</body>
+</html>
