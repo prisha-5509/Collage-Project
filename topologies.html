@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Network Topologies</title>
-
     <style>
         * { box-sizing: border-box; }
 
@@ -11,29 +12,29 @@
             font-family: Arial, sans-serif;
             background: #f4f8ff;
         }
-
+        
         header {
             background: #2053a3;
             color: white;
             text-align: center;
             padding: 35px 20px;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 32px;
+        
+        header h1 { 
+            margin: 0; 
+            font-size: 32px; 
         }
-
-        header p {
-            margin-top: 12px;
-            font-size: 18px;
+        
+        header p { 
+            margin-top: 12px; 
+            font-size: 18px; 
         }
-
-        nav {
-            background: #123776;
-            padding: 14px;
+        
+        nav { 
+            background: #123776; 
+            padding: 14px; 
         }
-
+        
         nav ul {
             list-style: none;
             display: flex;
@@ -48,20 +49,25 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 17px;
         }
 
-        nav a:hover {
-            color: #ffd43b;
+        nav a:hover { 
+            color: #ffd43b; 
         }
 
         .container {
             width: 85%;
+            max-width: 1000px;
             margin: 45px auto;
         }
 
         .container > h1 {
             color: #222222;
-            font-size: 38px;
+            font-size: 32px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 35px;
         }
 
         .cards {
@@ -75,15 +81,25 @@
             padding: 30px;
             border-radius: 18px;
             box-shadow: 0 5px 15px #cccccc;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .card h2 {
-            color: #2053a3;
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
-        .card p {
-            font-size: 18px;
-            line-height: 1.6;
+        .card h2 { 
+            color: #2053a3; 
+            margin-top: 0; 
+            font-size: 22px; 
+        }
+
+        .card p { 
+            font-size: 16px; 
+            line-height: 1.6; 
+            color: #4a5568; 
+            margin-bottom: 0; 
         }
 
         footer {
@@ -94,72 +110,76 @@
             margin-top: 50px;
         }
 
-        @media(max-width:700px) {
-            .cards {
-                grid-template-columns: 1fr;
+        @media (max-width: 768px) {
+            .container { 
+                width: 90%; 
+                margin: 30px auto; 
+            }
+            .container > h1 { 
+                font-size: 26px; 
+                margin-bottom: 25px; 
+            }
+            .cards { 
+                grid-template-columns: 1fr; 
+                gap: 20px; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul { 
+                gap: 15px; 
+            }
+            header h1 { 
+                font-size: 28px; 
+            }
+            .card { 
+                padding: 20px; 
             }
         }
     </style>
 </head>
-
 <body>
-
-<header>
-    <h1>🔗 Network Topologies</h1>
-    <p>Computer Network Learning Portal</p>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="network-types.html">Network Types</a></li>
-        <li><a href="topologies.html">Topologies</a></li>
-        <li><a href="devices.html">Devices</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="ip-addressing.html">IP Addressing</a></li>
-        <li><a href="practical.html">Practical</a></li>
-        <li><a href="team.html">Team</a></li>
-
-    </ul>
-</nav>
-
-<div class="container">
-
-    <h1>Types of Network Topologies :</h1>
-
-    <div class="cards">
-
-        <div class="card">
-            <h2>⭐ Star Topology</h2>
-            <p>All computers are connected to a central device such as a switch.</p>
-            <p><b>Advantage:</b> Easy to manage.</p>
+    <header>
+        <h1>🕸️ Network Topologies</h1>
+        <p>Computer Network Learning Portal</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="network-types.html">Network Types</a></li>
+            <li><a href="topologies.html">Topologies</a></li>
+            <li><a href="devices.html">Devices</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="ip-addressing.html">IP Addressing</a></li>
+            <li><a href="practical.html">Practical</a></li>
+            <li><a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Common Network Topologies:</h1>
+        <div class="cards">
+            <div class="card">
+                <h2>⭐ Star Topology</h2>
+                <p>All devices link up directly to a central hub or switch. 
+                    If one cable fails, only that device disconnects.</p>
+            </div>
+            <div class="card">
+                <h2>🚌 Bus Topology</h2>
+                <p>Devices connect along a single main backbone cable. Simple to install, 
+                    but a backbone break downs the whole network.</p>
+            </div>
+            <div class="card">
+                <h2>⭕ Ring Topology</h2>
+                <p>Devices connect in a circular loop. Data travels in one direction, 
+                    passing through each device like a token.</p>
+            </div>
+            <div class="card">
+                <h2>🕸️ Mesh Topology</h2>
+                <p>Every device connects to multiple other devices. Highly redundant and 
+                    reliable, but requires excessive cabling.</p>
+            </div>
         </div>
-
-        <div class="card">
-            <h2>🚌 Bus Topology</h2>
-            <p>All computers are connected to one main communication cable.</p>
-            <p><b>Advantage:</b> Simple and low cost.</p>
-        </div>
-
-        <div class="card">
-            <h2>⭕ Ring Topology</h2>
-            <p>Each computer is connected to two other computers, forming a ring.</p>
-            <p><b>Advantage:</b> Organized data transmission.</p>
-        </div>
-
-        <div class="card">
-            <h2>🔗 Mesh Topology</h2>
-            <p>Devices are connected using multiple connections.</p>
-            <p><b>Advantage:</b> High reliability.</p>
-        </div>
-
     </div>
-
-</div>
-
-<footer>
-    © 2026 Computer Network Learning Portal
-</footer>
-
+    <footer>© 2026 Computer Network Learning Portal</footer>
 </body>
 </html>

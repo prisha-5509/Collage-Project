@@ -1,4 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team</title>
 
     <style>
@@ -53,27 +57,61 @@
         }
 
         .container {
-            width: 80%;
+            width: 85%;
+            max-width: 1000px;
             margin: 45px auto;
         }
 
-        .team {
+        .team-section {
             background: white;
-            padding: 40px;
+            padding: 40px 30px;
             border-radius: 18px;
             box-shadow: 0 5px 15px #cccccc;
-            text-align: center;
         }
 
-        .team h1 {
+        .team-section h1 {
             color: #222222;
-        }
-        .team h2 {
-            color: #2053a3;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 35px;
+            font-size: 32px;
         }
 
-        .team p {
-            font-size: 18px;
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .member-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .member-card h2 {
+            color: #2053a3;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .member-card p {
+            font-size: 16px;
+            margin: 8px 0;
+            color: #4a5568;
+        }
+
+        .member-card strong {
+            color: #1a202c;
         }
 
         footer {
@@ -82,6 +120,37 @@
             text-align: center;
             padding: 35px;
             margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: 30px auto;
+            }
+            
+            .team-section {
+                padding: 30px 20px;
+            }
+
+            .team-section h1 {
+                font-size: 26px;
+                margin-bottom: 25px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr; 
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                gap: 15px;
+            }
+            
+            header h1 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
@@ -108,24 +177,34 @@
 
 <div class="container">
 
-    <div class="team">
-         <h1>Computer Engineering Team :</h1>
+    <div class="team-section">
+         <h1>Computer Engineering Team:</h1>
 
-            <h2>👩‍🎓 Team Member 1</h2>
-            <p>Name : Prisha Patel</p>
-            <p>Enrollment no. : 259020307039</p>
+         <div class="team-grid">
+            <div class="member-card">
+                <h2>👩‍🎓 Team Member 1</h2>
+                <p><strong>Name :</strong> Prisha Patel</p>
+                <p><strong>Enrollment No :</strong> 259020307039</p>
+            </div>
 
-            <h2>👩‍🎓 Team Member 2</h2>
-            <p>Name : Dhanvi Hasotkar</p>
-            <p>Enrollment no. : 259020307015</p>
+            <div class="member-card">
+                <h2>👩‍🎓 Team Member 2</h2>
+                <p><strong>Name :</strong> Dhanvi Hasotkar</p>
+                <p><strong>Enrollment No :</strong> 259020307015</p>
+            </div>
 
-            <h2>👩‍🎓 Team Member 3</h2>
-            <p>Name : Nitya Tamboli</p>
-            <p>Enrollment no. : 259020307065</p>
+            <div class="member-card">
+                <h2>👩‍🎓 Team Member 3</h2>
+                <p><strong>Name :</strong> Nitya Tamboli</p>
+                <p><strong>Enrollment No :</strong> 259020307065</p>
+            </div>
 
-            <h2>👩‍🎓 Team Member 4</h2>
-            <p>Name : Shreshtha Shah</p>   
-            <p>Enrollment no. : 259020307054</p>
+            <div class="member-card">
+                <h2>👩‍🎓 Team Member 4</h2>
+                <p><strong>Name :</strong> Shreshtha Shah</p>   
+                <p><strong>Enrollment No :</strong> 259020307054</p>
+            </div>
+         </div>
     </div>
 
 </div>

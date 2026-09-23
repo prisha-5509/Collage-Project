@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IP Addressing</title>
-
     <style>
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -20,33 +19,30 @@
             text-align: center;
             padding: 35px 20px;
         }
-
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-            color: white;
+        
+        header h1 { 
+            margin: 0; 
+            font-size: 32px; 
         }
 
-        header p {
-            margin: 12px 0 0;
-            font-size: 18px;
-            color: white;
+        header p { 
+            margin-top: 12px; 
+            font-size: 18px; 
         }
 
-        nav {
-            background: #123776;
-            padding: 14px;
+        nav { 
+            background: #123776; 
+            padding: 14px; 
         }
 
         nav ul {
             list-style: none;
-            margin: 0;
-            padding: 0;
-
             display: flex;
             justify-content: center;
-            gap: 25px;
             flex-wrap: wrap;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
         }
 
         nav a {
@@ -56,72 +52,82 @@
             font-size: 17px;
         }
 
-        nav a:hover {
-            color: #ffd43b;
+        nav a:hover { 
+            color: #ffd43b; 
         }
 
         .container {
             width: 85%;
+            max-width: 1000px;
             margin: 45px auto;
         }
 
         .container > h1 {
             color: #222222;
-            font-size: 38px;
-            margin-bottom: 25px;
+            font-size: 32px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 35px;
         }
 
         .cards {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
 
         .card {
             background: white;
-            padding: 35px;
+            padding: 30px;
             border-radius: 18px;
             box-shadow: 0 5px 15px #cccccc;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .card h2 {
-            color: #2053a3;
-            font-size: 30px;
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
-        .card p {
-            font-size: 18px;
-            line-height: 1.6;
+        .card h2 { 
+            color: #2053a3; 
+            margin-top: 0; 
+            font-size: 22px; 
+        }
+
+        .card p { 
+            font-size: 16px; 
+            line-height: 1.6; 
+            color: #4a5568; 
+            margin-bottom: 0; 
         }
 
         footer {
             background: #123776;
             color: white;
             text-align: center;
-            padding: 40px;
+            padding: 35px;
             margin-top: 50px;
-            font-size: 18px;
         }
 
-        @media (max-width: 700px) {
-            .cards {
-                grid-template-columns: 1fr;
-            }
+        @media (max-width: 768px) {
+            .container { width: 90%; margin: 30px auto; }
+            .container > h1 { font-size: 26px; margin-bottom: 25px; }
+            .cards { grid-template-columns: 1fr; gap: 20px; }
+        }
 
-            nav ul {
-                gap: 12px;
-            }
+        @media (max-width: 480px) {
+            nav ul { gap: 15px; }
+            header h1 { font-size: 28px; }
+            .card { padding: 20px; }
         }
     </style>
 </head>
-
 <body>
-
     <header>
-        <h1>🌐 IP Addressing</h1>
+        <h1>🔢 IP Addressing</h1>
         <p>Computer Network Learning Portal</p>
     </header>
-
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -134,32 +140,23 @@
             <li><a href="team.html">Team</a></li>
         </ul>
     </nav>
-
     <div class="container">
-
-        <h1>IP Address Versions :</h1>
-
+        <h1>Understanding Internet Protocols:</h1>
         <div class="cards">
-
             <div class="card">
-                <h2>IPv4</h2>
-                <p>IPv4 uses a 32-bit address.</p>
-                <p><b>Example:</b> 192.168.1.1</p>
+                <h2>🌐 IPv4</h2>
+                <p>Uses a 32-bit address format expressed as four numbers separated 
+                    by dots. Provides around 4.3 billion unique combinations.</p>
+                <p><b>Example : </b>192.168.1.1</p>
             </div>
-
             <div class="card">
-                <h2>IPv6</h2>
-                <p>IPv6 uses a 128-bit address.</p>
-                <p><b>Example:</b> 2001:db8::1</p>
+                <h2>🚀 IPv6</h2>
+                <p>Uses a 128-bit address layout written in hexadecimal digits separated by colons.
+                     Developed to replace IPv4 and provide an endless pool of addresses.</p>
+                <p><b>Example : </b>2001:db8::1</p>
             </div>
-
         </div>
-
     </div>
-
-    <footer>
-        © 2026 Computer Network Learning Portal
-    </footer>
-
+    <footer>© 2026 Computer Network Learning Portal</footer>
 </body>
 </html>

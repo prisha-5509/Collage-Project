@@ -1,26 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Computer Network Learning Portal</title>
-
     <style>
+        * { box-sizing: border-box; }
+
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: #f4f8ff;
-            color: #222222;
         }
 
         header {
-            background: #1646a0;
+            background: #2053a3;
             color: white;
-            padding: 18px;
             text-align: center;
+            padding: 35px 20px;
         }
 
-        nav {
-            background: #0d2f70;
-            padding: 12px;
+        header h1 { 
+            margin: 0; 
+            font-size: 32px; 
+        }
+
+        header p { 
+            margin-top: 12px; 
+            font-size: 18px; 
+        }
+
+        nav { 
+            background: #123776; 
+            padding: 14px; 
         }
 
         nav ul {
@@ -28,7 +40,7 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 25px;
             margin: 0;
             padding: 0;
         }
@@ -37,75 +49,149 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 17px;
         }
 
-        nav a:hover {
-            color: #ffd43b;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 70px 20px;
-            background: linear-gradient(135deg, #dbeafe, #eef2ff);
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            color: #1646a0;
-        }
-
-        .hero p {
-            font-size: 20px;
+        nav a:hover { 
+            color: #ffd43b; 
         }
 
         .container {
-            width: 75%;
-            margin: 40px auto;
+            width: 85%;
+            max-width: 1000px;
+            margin: 45px auto;
+        }
+
+        .welcome-box {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px #cccccc;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .welcome-box h1 {
+            color: #222222;
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .welcome-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #4a5568;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: #222222;
+            font-size: 26px;
+            text-align: center;
+            margin-bottom: 25px;
         }
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
         }
 
         .card {
             background: white;
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 4px 12px #bbb;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px #cccccc;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .card h2 {
-            color: #1646a0;
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
 
-        .button {
-            display: inline-block;
-            background: #1646a0;
+        .card h2 { 
+            color: #2053a3; 
+            margin-top: 0; 
+            font-size: 22px; 
+        }
+
+        .card p { 
+            font-size: 16px; 
+            line-height: 1.6; 
+            color: #4a5568; 
+            margin-bottom: 20px; 
+        }
+
+        .explore-btn {
+            background-color: #2053a3;
             color: white;
-            padding: 10px 18px;
-            border-radius: 8px;
             text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            align-self: flex-start;
+            transition: background 0.2s ease;
+        }
+
+        .explore-btn:hover {
+            background-color: #123776;
         }
 
         footer {
-            background: #0d2f70;
+            background: #123776;
             color: white;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            padding: 35px;
+            margin-top: 50px;
         }
+
+        @media (max-width: 768px) {
+            .container { 
+                width: 90%; 
+                margin: 30px auto; 
+            }
+            .welcome-box h1 { 
+                font-size: 26px; 
+            }
+            .welcome-box p { 
+                font-size: 16px; 
+            }
+            .cards { 
+                grid-template-columns: 1fr; 
+                gap: 20px; 
+            }
+            .explore-btn { 
+                align-self: stretch; 
+            } 
+        }
+
+        @media (max-width: 480px) {
+            nav ul { 
+                gap: 15px; 
+            }
+            header h1 { 
+                font-size: 28px; 
+            }
+            .card { 
+                padding: 20px; 
+            }
+        }
+
     </style>
 </head>
-
 <body>
-
     <header>
-        <h1>📌 Project</h1>
+        <h1>🏠 Dashboard (Project)</h1>
+        <p>Computer Network Learning Portal</p>
     </header>
-
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -118,61 +204,54 @@
             <li><a href="team.html">Team</a></li>
         </ul>
     </nav>
-
-    <section class="hero">
-        <h1>Computer Network Learning Portal</h1>
-        <p>Learn the basics of computer networking in a simple way.</p>
-        <a class="button" href="network-types.html">Start Learning</a>
-    </section>
-
     <div class="container">
+        <!-- Main Intro Box -->
+        <div class="welcome-box">
+            <h1>Master the Foundations of Networking</h1>
+            <p>Welcome to learning portal. Explore comprehensive study materials, analyze architectures, 
+                check practical resources, and meet our core engineering team.</p>
+        </div>
 
-        <h1>📚 What You Will Learn :</h1>
-
+        <h2 class="section-title">Explore Core Modules</h2>
+        
+        <!-- Modules Dashboard Grid Layout -->
         <div class="cards">
-
             <div class="card">
                 <h2>🌍 Network Types</h2>
-                <p>Learn about PAN, LAN, MAN and WAN.</p>
-                <a class="button" href="network-types.html">Learn More</a>
+                <p>Understanding how the computing devices are grouped and structured to 
+                    communicate, transfer data, and share resources across varying physical distances.</p>
+                <a href="network-types.html" class="explore-btn">Start Learning →</a>
             </div>
-
             <div class="card">
-                <h2>🔗 Topologies</h2>
-                <p>Learn about Star, Bus, Ring and Mesh topology.</p>
-                <a class="button" href="topologies.html">Learn More</a>
+                <h2>🕸️ Topologies</h2>
+                <p>Understanding how the arrangement of various devices (nodes) and connections (links) in a computer.</p>
+                <a href="topologies.html" class="explore-btn">Explore Models →</a>
             </div>
-
             <div class="card">
-                <h2>🖥️ Devices</h2>
-                <p>Learn about Router, Switch, Hub and Repeater.</p>
-                <a class="button" href="devices.html">Learn More</a>
+                <h2>🖥️ Network Devices</h2>
+                <p>Understanding how the physical hardware and equipment that connect computers and 
+                    other electronic tools so they can share data and talk to each other.</p>
+                <a href="devices.html" class="explore-btn">Study Hardware →</a>
             </div>
-
             <div class="card">
-                <h2>📡 Media</h2>
-                <p>Learn about guided and unguided transmission media.</p>
-                <a class="button" href="media.html">Learn More</a>
+                <h2>📡 Transmission Media</h2>
+                <p>Understanding how the physical or wireless channel that carries data signals 
+                    from a sender to a receiver in a network.</p>
+                <a href="media.html" class="explore-btn">Check Media →</a>
             </div>
-
             <div class="card">
-                <h2>🌐 IP Addressing</h2>
-                <p>Learn about IPv4 and IPv6.</p>
-                <a class="button" href="ip-addressing.html">Learn More</a>
+                <h2>🔢 IP Addressing</h2>
+                <p>Understanding how a unique numeric label assigned to every device connected to a computer network. </p>
+                <a href="ip-addressing.html" class="explore-btn">Learn Protocols →</a>
             </div>
-
             <div class="card">
-                <h2>🎯 Praticals</h2>
-                <p>Understanding by practicals.</p>
-                <a class="button" href="practical.html">Learn More</a>
+                <h2>🎯 Practicals</h2>
+                <p>Access downloadable lab reports, code templates, configuration manuals, 
+                    and shared classroom curriculum resource files instantly.</p>
+                <a href="practical.html" class="explore-btn">Get Materials →</a>
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>© 2026 Computer Network Learning Portal</p>
-        <p>Diploma CE - Sem 3</p>
-    </footer>
-
+    <footer>© 2026 Computer Network Learning Portal</footer>
 </body>
 </html>

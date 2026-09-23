@@ -1,61 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicals</title>
+
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-     
-        .network-box h3 {
-            margin-top: 0;
-            color: #212529;
-        }
-
-        .file-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .file-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            margin-bottom: 10px;
-            border-radius: 4px;
-        }
-
-        .file-name {
-            font-weight: bold;
-            color: #495057;
-        }
-
-        .download-btn {
-            background-color: #28a745;
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: bold;
-            transition: background 0.2s ease;
-        }
-
-        .download-btn:hover {
-            background-color: #218838;
-        }
+        * { box-sizing: border-box; }
 
         body {
             margin: 0;
@@ -91,7 +42,6 @@
             list-style: none;
             margin: 0;
             padding: 0;
-
             display: flex;
             justify-content: center;
             gap: 25px;
@@ -111,25 +61,109 @@
 
         .container {
             width: 85%;
+            max-width: 800px;
             margin: 45px auto;
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px #cccccc;
+        }
+
+        .container h1 {
+            margin-top: 0;
+            color: #222222;
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .container > p {
+            font-size: 16px;
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .file-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .file-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .file-name {
+            font-weight: bold;
+            color: #1a202c;
+            font-size: 18px;
+        }
+
+        .download-btn {
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            transition: background 0.2s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #218838;
         }
 
         footer {
             background: #123776;
             color: white;
             text-align: center;
-            padding: 40px;
+            padding: 35px;
             margin-top: 50px;
             font-size: 18px;
         }
 
-        @media (max-width: 700px) {
-            .cards {
-                grid-template-columns: 1fr;
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 30px 20px;
+                margin: 30px auto;
+            }
+            .container h1 {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 550px) {
+            nav ul {
+                gap: 15px;
+            }
+            
+            .file-item {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+                padding: 20px 15px;
             }
 
-            nav ul {
-                gap: 12px;
+            .download-btn {
+                width: 100%; 
+                padding: 12px 16px;
             }
         }
     </style>
@@ -155,52 +189,42 @@
     </nav>
 
     <div class="container">
-
         <h1>Shared Study Materials & Resources</h1>
-        <p>Click link below to request and download the PDF :</p>
+        <p>Click the buttons below to request and download the practical assignment PDFs:</p>
 
         <ul class="file-list">
-            <!-- These files should sit in your folder so they don't give a 404 error -->
             <li class="file-item">
                 <span class="file-name">Practical 1</span>
                 <a href="PRACTICAL 1.pdf" class="download-btn" download>Download</a>
             </li>
-
             <li class="file-item">
                 <span class="file-name">Practical 2</span>
                 <a href="PRACTICAL 2.pdf" class="download-btn" download>Download</a>
             </li>
-
             <li class="file-item">
                 <span class="file-name">Practical 3</span>
                 <a href="PRACTICAL 3.pdf" class="download-btn" download>Download</a>
             </li>
-
             <li class="file-item">
                 <span class="file-name">Practical 4</span>
                 <a href="PRACTICAL 4.pdf" class="download-btn" download>Download</a>
             </li>
-
             <li class="file-item">
                 <span class="file-name">Practical 5</span>
                 <a href="PRACTICAL 5.pdf" class="download-btn" download>Download</a>
             </li>
-
             <li class="file-item">
                 <span class="file-name">Practical 6</span>
                 <a href="PRACTICAL 6.pdf" class="download-btn" download>Download</a>
             </li>
-
             <li class="file-item">
                 <span class="file-name">Practical 7</span>
                 <a href="PRACTICAL 7.pdf" class="download-btn" download>Download</a>
             </li>
-
             <li class="file-item">
                 <span class="file-name">Practical 8</span>
                 <a href="PRACTICAL 8.pdf" class="download-btn" download>Download</a>
             </li>
-
             <li class="file-item">
                 <span class="file-name">Practical 9</span>
                 <a href="PRACTICAL 9.pdf" class="download-btn" download>Download</a>
